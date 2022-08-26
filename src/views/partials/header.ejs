@@ -1,0 +1,39 @@
+<header>
+    <section class="top-header">
+        <figure class="logo">
+            <a href="/"><img src="/images/PavlovaColor.png" alt="Logo de Pavlova"></a>
+        </figure>
+        <div class="name">Pavlova</div>
+        <div class="form" action="#" method="GET">
+            <button type="submit"class="submit"><i class="fa fa-search"></i></button>
+            <input type="text" name="buscar" id="buscar" placeholder="Buscar" class="input">
+        </div>
+        <div class="iconos">
+            <% if (!locals.estaLogueado) { %>
+                <a href="/users/register">Creá tu cuenta</a><i class="far fa-address-card"></i>
+                <a href="/users/login">Ingresá</a> <i class="fas fa-user-circle"></i>
+            <% } else { %>
+                <a href="/users/login">Perfil </a><i class="fas fa-user-circle"></i>
+                <a href="/users/logout">Cerrar Sesión </a><i class="fas fa-sign-out-alt"></i>
+            <% } %>
+            <a href="/products/productCart"></a><i class="fas fa-shopping-bag"></i> 
+        </div>
+    </section>
+   <section>
+    <nav>
+        <ul class="submenu">
+        <li><a href="/">Nosotros</li></a>
+        <li><a href="/products/pasteleria">Pasteleria</li></a>
+        <li><a href="/products/masas">Masas</li></a>
+        <li><a href="/products/tortas">Tortas</li></a>
+        <% if (locals.estaLogueado) { %>
+        <li><a href="/products/create">Crear</li></a>
+        <li><a href="/products/productedit">Editar</li></a>
+        <% } %>
+        </ul>
+    </nav>
+    <div class="desplegable-menu">
+        <i class="fa-solid fa-circle-chevron-down"></i>
+    </div>
+    </section>
+</header>

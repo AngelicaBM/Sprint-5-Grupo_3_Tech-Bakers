@@ -1,0 +1,27 @@
+[
+ {
+  "nombre": "Waylen",
+  "apellido": "Tanfield",
+  "email": "wtanfield1@dion.ne.jp",
+  "telefono": "456",
+  "direccion": "Cra 46",
+  "ciudad": "sad",
+  "password": "zQTcFJ8BoOg",
+  "repetirpassword": "zQTcFJ8BoOg",
+  "terms": "terms",
+  "image": "imgProduct_165974131018hola.jpg",
+  "id": 1
+ },
+ {
+  "nombre": "Pruebapass",
+  "apellido": "Pruebapass",
+  "email": "Pruebapass@Pruebapass.com",
+  "telefono": "999999999999",
+  "direccion": "Pruebapass",
+  "ciudad": "Pruebapass",
+  "password": "$2a$10$WFTawg5jTfmrt5NS2oXeueFh3kV1LfcBBYeOd2NzJEwkTdFWDecRi",
+  "terms": "terms",
+  "image": "default-user.png",
+  "id": 2
+ }
+]
