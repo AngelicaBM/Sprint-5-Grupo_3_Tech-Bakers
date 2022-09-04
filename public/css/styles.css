@@ -41,7 +41,9 @@ a {
 }
 
 .logo img{
-    width: 140px;
+    width: 60%;
+    min-width: 100px;
+    max-width: 120px;
  }
 
 div.name {
@@ -50,7 +52,7 @@ div.name {
 
 .form{
     width: 100%;
-    max-width: 150px;
+    max-width: 120px;
     display: flex;
     justify-content: right;
     margin-left: auto;
@@ -66,7 +68,7 @@ header .form .input{
     font-size: 14px;
     padding: 2px;
     margin-bottom: 2px;
-    width: 50px;
+    width: 80px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #000;
@@ -76,7 +78,7 @@ header .form .input{
 }
 
 header .form .input:hover{
-    width: 100%;
+    width: 70%;
 }
 
 header .form .submit{
@@ -104,15 +106,31 @@ header .form input::placeholder{
 .iconos {
     display: flex;
     justify-content: center;
-    flex-grow: 0.05;
     align-items: center;
 }
 
-.iconos a,
+.iconos .no-vis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconos a {
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+}
+
+.iconos a img{
+    width: 30px;
+    height: 30px;
+}
+
 .iconos i {
     font-size: 18px;
-    padding: 4px;
     color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
    }
 
 nav {
@@ -151,7 +169,7 @@ div.desplegable-menu{
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 100px;
+    top: 80%;
     bottom: 0;
     right: 0;
     left: 0;
@@ -186,7 +204,6 @@ width: 100%;
 }
 
 .edit-delete button{
-    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -275,7 +292,7 @@ article div.descripciondest i:hover{
 }
 
 .name-product{
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #discoun{
@@ -288,6 +305,7 @@ footer{
     padding: 20px;
     position: sticky;
     top: 100vh; 
+    margin-top: 10px;
 }
 
 footer .input {
@@ -360,7 +378,6 @@ h3.foot {
     text-align: left;
 }
 
-
 @media (min-width: 480px){
     
     div.name {
@@ -404,7 +421,7 @@ h3.foot {
         font-size: 14px;
         padding: 2px;
         margin-bottom: 2px;
-        width: 100px;
+        width: 80px;
         background-color: transparent;
         border-bottom: 1px solid #000;
         outline: none;
@@ -412,15 +429,18 @@ h3.foot {
         transition: all 0.6s ease;
     }
     
-    header .form .input:hover{
-        width: 100%;
-    }
 }
 
 @media (max-width: 768px){
-    .iconos a {
-        display: none;
-       }
+
+    .form{
+        width: 100%;
+        max-width: 150px;
+        display: flex;
+        justify-content: right;
+        margin-left: auto;
+    }
+    
 }
 
 @media (min-width: 768px){
@@ -433,6 +453,14 @@ h3.foot {
         padding: 8px 0 4px 0;
         font-size: 16px;
     }
+
+    .iconos .no-vis i {
+        display: none;
+       }
+
+    .iconos i .car-comp {
+        display: block;
+       }
     
     nav ul{
         list-style: none;
@@ -882,7 +910,7 @@ body main section.producto-pDetail{
 }
 
 p.product-detail-price-list{
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -1025,7 +1053,7 @@ section.carro {
     gap: 8px;
     justify-content: space-between;
     font-size: 14px;
-    padding: 3px;
+    padding: 3px 0;
 }
 
 .productos-carro p.p1{
@@ -1054,6 +1082,7 @@ section.carro {
     text-align: center;
     align-self: center;
     margin-right: 5px;
+    min-width: 8px;
 }
 
 .menu-carro i{
@@ -1081,6 +1110,11 @@ section.carro {
     border-radius: 5px;
     border: 2px solid #000;
     background-color: white;
+    width: 175px;
+}
+
+.opc-menu {
+    display: none;
 }
 
 .form-button-descuento {
@@ -1088,7 +1122,7 @@ section.carro {
     color: black;
     border-radius: 4px;
     font-weight: bold;
-    width: 150px;
+    width: 130px;
     height: 30px;
     border: none;
 }
@@ -1098,7 +1132,7 @@ section.carro {
     color: black;
     border-radius: 4px;
     font-weight: bold;
-    width: 200px;
+    width: 175px;
     height: 30px;
     border: none;
     margin: 2px 0px;
@@ -1118,7 +1152,7 @@ section.carro {
     border: solid 1px black;
     margin: 1px;
     font-size: 14px;
-    width: 200px;
+    width: 175px;
     padding: 3px;
     justify-content: space-between;
 }
@@ -1164,6 +1198,12 @@ section.carro {
     section.carro {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .opc-menu {
+        display: flex;
+        align-items: center;
+        margin-right: 4px;
     }
 
     .contenedor-compras {
@@ -1373,4 +1413,34 @@ form .form-data-create_edit select{
     .productos-carro p.p2{
         display: block;
     }
+}
+
+.welcome-profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.welcome-profile figure {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-profile img{
+    max-width: 80px;
+    border-radius: 50%;
+}
+
+.detail-user {
+    text-align: center;
+}
+
+.info-user {
+    margin-bottom: 10px;
+}
+
+.iconos img {
+    width: 18px;
+    border-radius: 50%;
 }
